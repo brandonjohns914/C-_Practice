@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		413961EB28949C9C0018A450 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 413961EA28949C9C0018A450 /* main.cpp */; };
+		416DF004289B3D1100325299 /* Array_List_Type_Template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 416DF002289B3D1100325299 /* Array_List_Type_Template.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		413961E728949C9C0018A450 /* C++_Practice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++_Practice"; sourceTree = BUILT_PRODUCTS_DIR; };
 		413961EA28949C9C0018A450 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		416DF002289B3D1100325299 /* Array_List_Type_Template.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Array_List_Type_Template.cpp; sourceTree = "<group>"; };
+		416DF003289B3D1100325299 /* Array_List_Type_Template.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array_List_Type_Template.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,19 @@
 		413961E928949C9C0018A450 /* C++_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				416DF001289B215700325299 /* Array_List_Type */,
 				413961EA28949C9C0018A450 /* main.cpp */,
 			);
 			path = "C++_Practice";
+			sourceTree = "<group>";
+		};
+		416DF001289B215700325299 /* Array_List_Type */ = {
+			isa = PBXGroup;
+			children = (
+				416DF002289B3D1100325299 /* Array_List_Type_Template.cpp */,
+				416DF003289B3D1100325299 /* Array_List_Type_Template.hpp */,
+			);
+			path = Array_List_Type;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413961EB28949C9C0018A450 /* main.cpp in Sources */,
+				416DF004289B3D1100325299 /* Array_List_Type_Template.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
