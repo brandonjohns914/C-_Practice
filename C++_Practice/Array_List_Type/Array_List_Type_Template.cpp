@@ -22,29 +22,23 @@ bool Array_List_Type<Array_Type>::  is_Full() const
     return (length == max_Size);
 }
 
-template<class Array_Type>
-void Array_List_Type<Array_Type>:: search_list(const Array_Type& item, bool & found)
-{
-    
-}
-
-template<class Array_Type>
-void Array_List_Type<Array_Type>:: insert_list(const Array_Type& new_item)
-{
-    
-}
 
 template<class Array_Type>
 void Array_List_Type<Array_Type>::  remove(const Array_Type& remove_item)
 {
-    
+    int location;
+    if (length ==0)
+        cerr<<" cannot delete from an empty list"<<endl;
+    else
+    {
+        location = sequential_Search(remove_item);
+        if(location != -1)
+            remove_At(location);
+        else
+            cout<<"item is not in the list"<<endl;
+    }
 }
 
-template<class Array_Type>
-void Array_List_Type<Array_Type>::  destory_list()
-{
-    
-}
 
 template<class Array_Type>
 void Array_List_Type<Array_Type>::  print_list()
@@ -157,13 +151,39 @@ void Array_List_Type<Array_Type>::  clear_List()
 template<class Array_Type>
 int Array_List_Type<Array_Type>::  sequential_Search(const Array_Type& item)
 {
-    length =0;
+    int location;
+    bool found = false;
+    for (location = 0; location< length; location++){
+        if(list[location] == item)
+        {
+            found = true;
+            break;
+        }
+        if(found)
+            return location;
+        else
+            return -1;
+    }
 }
 
 template<class Array_Type>
 void Array_List_Type<Array_Type>::  insert(const Array_Type& insert_Item)
 {
-    
+    int location;
+    if (length ==0)
+        list[length] = insert_Item;
+    else if(length == max_Size)
+        cerr<<"list is full with "<< max_Size<< " items"<<endl;
+    else
+    {
+        location = sequential_Search(insert_Item);
+        if (location == -1)
+            list[length++]= insert_Item;
+        else
+        {
+            cerr<< "item is already in the list no duplicates"<<endl;
+        }
+    }
 }
 
 template<class Array_Type>

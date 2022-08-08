@@ -14,10 +14,8 @@ class Array_List_Type{
 public:
     bool is_Empty() const;
     bool is_Full() const;
-    void search_list(const Array_Type& item, bool & found);
     void insert_list(const Array_Type& new_item);
     void remove(const Array_Type& remove_item);
-    void destory_list();
     void print_list();
     Array_List_Type();
     int list_Size();
